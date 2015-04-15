@@ -1,0 +1,37 @@
+body
+{
+  height : 100%;
+  width : 100%;
+  background-color : #f4f4f4!important;
+}
+._topgrid_make
+{
+	height : 60px;
+	width : 1280px;
+	border-bottom: 1px solid #e5e5e5;
+}
+._logotext_make
+{
+	position: relative;
+	font-size: 18pt;
+  	left: 100px;
+  	top: 20px;
+  	width:100px;
+}
+._footer_make
+{
+  position: absolute;
+  border-top: 1px solid #e5e5e5;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  text-align:center;
+  overflow: hidden;
+}
+
+._signin_make
+{
+	position : relative;
+	left : 100px;
+	width : 50px;
+}

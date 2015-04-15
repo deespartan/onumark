@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>delightful deals for you, get set go!</title>
+<link rel="icon" href="../images/favicon.jpg" type="image/x-icon" sizes="16x16"></link>
+<link rel="stylesheet" type="text/css" href="../styles/theme.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+		$("#_signinkey").click(function()
+		{
+			$.ajax({
+			url:"../serverphp/userauth.php",
+			type:"post",
+			data : {name:$("#_usernamekey").val(), password:$("#_userpwdkey").val()},
+			success:function(jsonobj){if(JSON.parse(jsonobj).isadmin == "true"){$("#_usernamediv").hide();$("#_userpwddiv").hide();$("#_signin").hide();}}
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="_topgrid" class="_topgrid_make">
+		<div id="_logotext" class="_logotext_make">
+			<span>onumark</span>
+		</div>
+</div>
+<br>
+<div id="_usernamediv">
+	username : <input type="text" id="_usernamekey" placeholder="..." size="25"> 
+</div>
+<br>
+<div id="_userpwddiv">
+	password : <input type="text" id="_userpwdkey" placeholder="..." size="25">
+</div> 
+<br>
+<div id="_signin" class="_signin_make">
+	<input id="_signinkey" name="signin" type="submit" value="sign in">
+</div>
+</div>
+
+<div id="_footer" class="_footer_make">
+	<span>&copy onumark 2015</span>
+</div>
+</body>
+</html>
