@@ -24,13 +24,18 @@
 		{
 			paramtoset = flipkart_aff_id;
 		}
-		ifkeyedVal.indexOf("snapdeal") > 0)
+		if(keyedVal.indexOf("snapdeal") > 0)
 		{
 			paramtoset = snapdeal_aff_id;
 		}
 		document.getElementById("_afflink").value = keyedVal + "&" + paramtoset;
 		var win = window.open(document.getElementById("_afflink").value, '_blank');
 		win.focus();
+	}
+	
+	function generate_reset()
+	{
+		document.getElementById("_afflink").value="";
 	}
 	</script>
 </head>
@@ -45,7 +50,8 @@
 <div id="_affdiv" class="_affdiv_make">
 Get the affiliate link <br>
 <input id="_afflink" type="text" name="affiliate" placeholder=" please provide your product link here..." size="100" autofocus>
-<input id="_generate_link_div" class="_generate_make" type="button" value="load" onclick="generate_aff()"/>
+<input id="_generate_link" class="_generate_make" type="button" value="load" onclick="generate_aff()"/>
+<input id="_generate_reset" class="_generate_make" type="button" value="reset" onclick="generate_reset()"/>
 </div>
 <div id="_disclaimer" class="_disclaimer_make">
 <li>works only for web app.
