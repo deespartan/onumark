@@ -1,3 +1,4 @@
+ /* Copyright @ onumark 2015. All rights reserved */
 <?php
 define("dbservername", "localhost");
 define("dbusername", "root");

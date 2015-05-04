@@ -1,0 +1,58 @@
+<!-- Copyright @ onumark 2015. All rights reserved -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delightful deals for you, get set go!</title>
+	<link rel="icon" href="../images/favicon.jpg" type="image/x-icon" sizes="16x16"></link>
+	<link rel="stylesheet" type="text/css" href="../styles/theme.css">
+	<script>
+	/* confidential */
+	/* todo - move to jquery library impl */
+	var flipkart_aff_id = "affid=deedeadly";
+	var amazon_aff_id = "tracking_id=onumark-21";
+	var snapdeal_aff_id = "aff_id=33422";
+	function generate_aff()
+	{
+		var paramtoset;
+		var keyedVal = document.getElementById("_afflink").value;
+		
+		if(keyedVal.indexOf("amazon") > 0)
+		{
+			paramtoset = amazon_aff_id;
+		}
+		if(keyedVal.indexOf("flipkart") > 0)
+		{
+			paramtoset = flipkart_aff_id;
+		}
+		ifkeyedVal.indexOf("snapdeal") > 0)
+		{
+			paramtoset = snapdeal_aff_id;
+		}
+		document.getElementById("_afflink").value = keyedVal + "&" + paramtoset;
+		var win = window.open(document.getElementById("_afflink").value, '_blank');
+		win.focus();
+	}
+	</script>
+</head>
+
+<body>
+<div id="_topgrid" class="_topgrid_make">
+		<div id="_logotext" class="_logotext_make">
+			<span>onumark</span> 
+		</div>
+</div>
+
+<div id="_affdiv" class="_affdiv_make">
+Get the affiliate link <br>
+<input id="_afflink" type="text" name="affiliate" placeholder=" please provide your product link here..." size="100" autofocus>
+<input id="_generate_link_div" class="_generate_make" type="button" value="load" onclick="generate_aff()"/>
+</div>
+<div id="_disclaimer" class="_disclaimer_make">
+<li>works only for web app.
+<li>supports Flipkart, Amazon, Snapdeal as of now.
+</div>
+<div id="_footer" class="_footer_make">
+	<span>&copy onumark 2015</span>
+</div>
+</body>
+</html>

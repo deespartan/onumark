@@ -1,3 +1,4 @@
+/* Copyright @ onumark 2015. All rights reserved */
 body
 {
   height : 100%;
@@ -34,4 +35,27 @@ body
 	position : relative;
 	left : 100px;
 	width : 50px;
+}
+
+._affdiv_make
+{
+	position: absolute;
+	font-size: 15pt;
+	top : 25%;
+	left : 10%;
+}
+
+._generate_make:hover
+{
+	color:green;
+	cursor:pointer;
+}
+
+
+._disclaimer_make
+{
+	font-size : 8pt;
+	position: absolute;
+	top : 35%;
+	left : 10%;
 }
